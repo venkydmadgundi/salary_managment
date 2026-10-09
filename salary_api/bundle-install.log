@@ -1,0 +1,151 @@
+Running `bundle install --jobs 1 --verbose` with bundler 2.6.9
+Found no changes, using resolution from the lockfile
+The definition is missing ["rails-8.1.4", "puma-8.0.2", "solid_cache-1.0.10", "solid_queue-1.7.0", "solid_cable-4.1.0", "bootsnap-1.26.0", "kamal-2.12.0", "debug-1.11.1", "rubocop-rails-omakase-1.1.0", "actioncable-8.1.4", "nio4r-2.7.5", "msgpack-1.8.5", "bcrypt_pbkdf-1.1.2", "ed25519-1.4.0", "irb-1.18.0", "reline-0.7.0", "rubocop-1.91.0", "rubocop-performance-1.27.0", "rubocop-rails-2.38.0", "websocket-driver-0.8.2", "bigdecimal-4.1.3", "json-3.0.2", "minitest-6.0.6", "prism-1.9.0", "rdoc-8.1.0", "io-console-0.9.4", "rubocop-ast-1.50.0", "net-imap-0.6.7", "erb-6.0.7", "rbs-4.2.0", "date-3.6.0"]
+HTTP GET https://index.rubygems.org/versions
+HTTP 304 Not Modified https://index.rubygems.org/versions
+Fetching gem metadata from https://rubygems.org/
+Looking up gems ["action_text-trix", "actioncable", "actionmailbox", "actionmailer", "actionpack", "actiontext", "actionview", "activejob", "activemodel", "activerecord", "activestorage", "activesupport", "ast", "base64", "bcrypt_pbkdf", "bigdecimal", "bootsnap", "brakeman", "builder", "bundler-audit", "concurrent-ruby", "connection_pool", "crass", "date", "debug", "dotenv", "drb", "ed25519", "erb", "erubi", "et-orbi", "fugit", "globalid", "i18n", "io-console", "irb", "json", "kamal", "language_server-protocol", "lint_roller", "logger", "loofah", "mail", "marcel", "mini_mime", "minitest", "msgpack", "net-imap", "net-pop", "net-protocol", "net-scp", "net-sftp", "net-smtp", "net-ssh", "nio4r", "nokogiri", "ostruct", "parallel", "parser", "pp", "prettyprint", "prism", "puma", "raabro", "racc", "rack", "rack-session", "rack-test", "rackup", "rails", "rails-dom-testing", "rails-html-sanitizer", "railties", "rainbow", "rake", "rbs", "rdoc", "regexp_parser", "reline", "rubocop", "rubocop-ast", "rubocop-performance", "rubocop-rails", "rubocop-rails-omakase", "ruby-progressbar", "securerandom", "solid_cable", "solid_cache", "solid_queue", "sqlite3", "sshkit", "thor", "thruster", "timeout", "tsort", "tzinfo", "tzinfo-data", "unicode-display_width", "unicode-emoji", "uri", "useragent", "websocket-driver", "websocket-extensions", "zeitwerk"]
+Looking up gems ["celluloid", "coffee-rails", "em-hiredis", "faye-websocket", "redis", "activemodel-globalid", "mimemagic", "erubis", "rails-deprecated_sanitizer", "cgi", "bcrypt-ruby", "text-format", "arel", "activerecord-deprecated_finders", "memcache-client", "multi_json", "thread_safe", "method_source", "mutex_m", "benchmark", "rack-mount", "rack-cache", "sprockets", "journey", "snappy", "haml", "ruby2ruby", "ruport", "ruby_parser", "sass", "fastercsv", "highline", "terminal-table", "json_pure", "slim", "safe_yaml", "bundler", "functional-ruby", "ref", "debug_inspector", "iseq_collector", "dotenv-deployment", "ruby2_keywords", "x25519", "mime-types", "treetop", "tlsmail", "digest", "strscan", "io-wait", "needle", "jruby-pageant", "rbnacl", "rbnacl-libsodium", "openssl", "sexp_processor", "slop", "webrick", "hoe", "weakling", "mini_portile", "mini_portile2", "pkg-config", "psych", "abbrev", "jar-dependencies", "rack-ssl", "activeresource", "actionwebservice", "sprockets-rails", "rubocop-minitest", "term-ansicolor", "backports", "powerpack", "astrolabe", "tins", "jaro_winkler", "rexml", "mcp", "colorize", "ffi", "unicode-version"]
+Looking up gems ["timers", "facter", "celluloid-essentials", "celluloid-extras", "celluloid-fsm", "celluloid-pool", "celluloid-supervision", "nenv", "rspec-logsplit", "coffee-script", "hiredis", "eventmachine", "thin", "abstract", "rspec", "redis-client", "bcrypt", "text-hyphen", "ZenTest", "RubyInline", "atomic", "multimap", "hike", "tilt", "snappy-jars", "ParseTree", "pdf-writer", "transaction-simple", "mailfactory", "RedCloth", "scruffy", "gem_plugin", "parseinput", "prawn", "prawn-table", "termios", "temple", "spruz", "escape_utils", "listen", "sass-listen", "mime-types-data", "facets", "polyglot", "ipaddr", "jruby-openssl", "rubyforge", "gemcutter", "net-ftp", "stringio", "ruby-maven", "rails-observers", "activemodel-serializers-xml", "mize", "sync", "readline", "json_rpc_handler", "json-schema", "json_schemer"]
+Looking up gems ["celluloid-gems", "coveralls", "hitimes", "coffee-script-source", "execjs", "rake-compiler", "CFPropertyList", "sys-admin", "win32-api", "win32console", "win32-dir", "windows-api", "windows-pr", "win32-security", "hocon", "sys-filesystem", "daemons", "rspec-core", "rspec-expectations", "rspec-mocks", "SexpProcessor", "color", "color-tools", "prawn-layout", "prawn-core", "prawn-format", "prawn-security", "pdf-reader", "ttfunk", "afm", "ruby-rc4", "pdf-core", "matrix", "rb-fsevent", "rb-inotify", "bouncy-castle-java", "rb-fchange", "rb-kqueue", "celluloid-io", "ruby_dep", "time", "maven-tools", "ruby-maven-libs", "protocol", "addressable", "ecma-re-validator", "hana", "rdf", "uri_template", "simpleidn"]
+Looking up gems ["rest-client", "simplecov", "configuration", "mkrf", "win32ole", "win32-registry", "test-unit", "libxml-ruby", "nkf", "ffi-win32-extensions", "mkmf-lite", "archive-tar-minitar", "diff-lcs", "rspec-support", "Ascii85", "hashery", "virtus", "public_suffix", "link_header", "hamster", "bcp47_spec", "unf"]
+Looking up gems ["simplecov-html", "docile", "lockfile", "simplecov_json_formatter", "fiddle", "power_assert", "ptools", "memoist", "netrc", "http-cookie", "http-accept", "minitar", "minitar-cli", "blankslate", "descendants_tracker", "axiom-types", "coercible", "equalizer", "unf_ext"]
+Looking up gems ["pattern-match", "domain_name", "win32-file", "powerbar", "ice_nine", "adamantium"]
+Looking up gems ["win32-file-stat", "ansi", "hashie", "memoizable"]
+Using rake 13.4.2
+0:  rake (13.4.2) from C:/Users/venky/.local/share/gem/ruby/3.4.0/specifications/rake-13.4.2.gemspec
+Using base64 0.3.0
+0:  base64 (0.3.0) from C:/Users/venky/.local/share/gem/ruby/3.4.0/specifications/base64-0.3.0.gemspec
+Installing bigdecimal 4.1.3 with native extensions
+Using rubygems directory: C:/Users/venky/.local/share/gem/ruby/3.4.0
+Building native extensions. This could take a while...
+Bundler::InstallError: Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: C:/Users/venky/.local/share/gem/ruby/3.4.0/gems/bigdecimal-4.1.3/ext/bigdecimal
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+checking for __builtin_clz()... *** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include=${opt-dir}/include
+	--without-opt-include
+	--with-opt-lib=${opt-dir}/lib
+	--without-opt-lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=C:/Ruby34-x64/bin/$(RUBY_BASE_NAME)
+C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:528:in 'MakeMakefile#try_do': The compiler failed to generate an executable file. (RuntimeError)
+You have to install development tools first.
+
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:655:in 'MakeMakefile#try_compile'
+	from extconf.rb:6:in 'block in Object#have_builtin_func'
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:1070:in 'block in MakeMakefile#checking_for'
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:370:in 'block (2 levels) in MakeMakefile::Logging.postpone'
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:340:in 'MakeMakefile::Logging.open'
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:370:in 'block in MakeMakefile::Logging.postpone'
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:340:in 'MakeMakefile::Logging.open'
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:366:in 'MakeMakefile::Logging.postpone'
+	from C:/Ruby34-x64/lib/ruby/3.4.0/mkmf.rb:1069:in 'MakeMakefile#checking_for'
+	from extconf.rb:5:in 'Object#have_builtin_func'
+	from extconf.rb:18:in '<main>'
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  C:/Users/venky/.local/share/gem/ruby/3.4.0/extensions/x64-mingw-ucrt/3.4.0/bigdecimal-4.1.3/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in C:/Users/venky/.local/share/gem/ruby/3.4.0/gems/bigdecimal-4.1.3 for inspection.
+Results logged to C:/Users/venky/.local/share/gem/ruby/3.4.0/extensions/x64-mingw-ucrt/3.4.0/bigdecimal-4.1.3/gem_make.out
+
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems/ext/builder.rb:125:in 'Gem::Ext::Builder.run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems/ext/ext_conf_builder.rb:30:in 'Gem::Ext::ExtConfBuilder.build'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems/ext/builder.rb:206:in 'Gem::Ext::Builder#build_extension'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems/ext/builder.rb:240:in 'block in Gem::Ext::Builder#build_extensions'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems/ext/builder.rb:237:in 'Array#each'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems/ext/builder.rb:237:in 'Gem::Ext::Builder#build_extensions'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems/installer.rb:844:in 'Gem::Installer#build_extensions'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/rubygems_gem_installer.rb:111:in 'Bundler::RubyGemsGemInstaller#build_extensions'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/rubygems_gem_installer.rb:30:in 'Bundler::RubyGemsGemInstaller#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/source/rubygems.rb:220:in 'Bundler::Source::Rubygems#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/gem_installer.rb:55:in 'Bundler::GemInstaller#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/gem_installer.rb:17:in 'Bundler::GemInstaller#install_from_spec'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/parallel_installer.rb:133:in 'Bundler::ParallelInstaller#do_install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/parallel_installer.rb:118:in 'Bundler::ParallelInstaller#install_serially'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/parallel_installer.rb:94:in 'Bundler::ParallelInstaller#call'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/parallel_installer.rb:66:in 'Bundler::ParallelInstaller.call'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:198:in 'Bundler::Installer#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:84:in 'block in Bundler::Installer#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:835:in 'block in Gem.open_file_with_flock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:823:in 'IO.open'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:823:in 'Gem.open_file_with_flock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:809:in 'Gem.open_file_with_lock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/process_lock.rb:13:in 'block in Bundler::ProcessLock.lock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/shared_helpers.rb:105:in 'Bundler::SharedHelpers#filesystem_access'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/process_lock.rb:12:in 'Bundler::ProcessLock.lock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:71:in 'Bundler::Installer#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:23:in 'Bundler::Installer.install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli/install.rb:72:in 'Bundler::CLI::Install#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:247:in 'block in Bundler::CLI#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/settings.rb:159:in 'Bundler::Settings#temporary'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:246:in 'Bundler::CLI#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:29:in 'Bundler::CLI.start'
+  C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:28:in 'block in <top (required)>'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/friendly_errors.rb:117:in 'Bundler.with_friendly_errors'
+  C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:20:in '<top (required)>'
+  C:/Ruby34-x64/bin/bundle:33:in 'Kernel#load'
+  C:/Ruby34-x64/bin/bundle:33:in '<main>'
+
+An error occurred while installing bigdecimal (4.1.3), and Bundler cannot continue.
+
+In Gemfile:
+  rails was resolved to 8.1.4, which depends on
+    actiontext was resolved to 8.1.4, which depends on
+      action_text-trix was resolved to 2.1.19, which depends on
+        railties was resolved to 8.1.4, which depends on
+          actionpack was resolved to 8.1.4, which depends on
+            actionview was resolved to 8.1.4, which depends on
+              rails-dom-testing was resolved to 2.3.0, which depends on
+                activesupport was resolved to 8.1.4, which depends on
+                  bigdecimal
+
+C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/parallel_installer.rb:167:in 'Bundler::ParallelInstaller#handle_error'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/parallel_installer.rb:97:in 'Bundler::ParallelInstaller#call'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer/parallel_installer.rb:66:in 'Bundler::ParallelInstaller.call'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:198:in 'Bundler::Installer#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:84:in 'block in Bundler::Installer#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:835:in 'block in Gem.open_file_with_flock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:823:in 'IO.open'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:823:in 'Gem.open_file_with_flock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/rubygems.rb:809:in 'Gem.open_file_with_lock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/process_lock.rb:13:in 'block in Bundler::ProcessLock.lock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/shared_helpers.rb:105:in 'Bundler::SharedHelpers#filesystem_access'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/process_lock.rb:12:in 'Bundler::ProcessLock.lock'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:71:in 'Bundler::Installer#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/installer.rb:23:in 'Bundler::Installer.install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli/install.rb:72:in 'Bundler::CLI::Install#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:247:in 'block in Bundler::CLI#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/settings.rb:159:in 'Bundler::Settings#temporary'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:246:in 'Bundler::CLI#install'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/cli.rb:29:in 'Bundler::CLI.start'
+  C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:28:in 'block in <top (required)>'
+  C:/Ruby34-x64/lib/ruby/3.4.0/bundler/friendly_errors.rb:117:in 'Bundler.with_friendly_errors'
+  C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:20:in '<top (required)>'
+  C:/Ruby34-x64/bin/bundle:33:in 'Kernel#load'
+  C:/Ruby34-x64/bin/bundle:33:in '<main>'
