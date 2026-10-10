@@ -126,6 +126,41 @@ RSpec.describe "Api::Employees", type: :request do
     end
   end
 
+  describe "GET /api/employees/export.csv" do
+    it "exports all matching employees as CSV, ignoring page pagination" do
+      12.times do |index|
+        Employee.create!(employee_attributes.merge(
+          name: "Employee #{index.to_s.rjust(2, "0")}",
+          email: "employee#{index}@example.com"
+        ))
+      end
+      Employee.create!(employee_attributes.merge(
+        name: "Other Employee",
+        email: "other@example.com",
+        country: "DE"
+      ))
+
+      get "/api/employees/export.csv", params: { country: "US", page: 2 }
+
+      expect(response).to have_http_status(:ok)
+      expect(response.media_type).to eq("text/csv")
+      expect(response.headers["Content-Disposition"]).to include("employees-")
+      rows = CSV.parse(response.body, headers: true)
+      expect(rows.length).to eq(12)
+      expect(rows.map { |row| row["name"] }).to include("Employee 00", "Employee 11")
+      expect(rows.map { |row| row["country"] }.uniq).to eq(["US"])
+    end
+
+    it "neutralizes spreadsheet formulas in exported text fields" do
+      Employee.create!(employee_attributes.merge(name: "=1+1"))
+
+      get "/api/employees/export.csv"
+
+      expect(response).to have_http_status(:ok)
+      expect(CSV.parse(response.body, headers: true).first["name"]).to eq("'=1+1")
+    end
+  end
+
   describe "GET /api/employees/:id" do
     let!(:employee) { Employee.create!(employee_attributes) }
 
@@ -227,6 +262,43 @@ RSpec.describe "Api::Employees", type: :request do
       employee.discard!
 
       delete "/api/employees/#{employee.id}"
+
+      expect(response).to have_http_status(:not_found)
+    end
+  end
+
+  describe "GET /api/employees/deleted" do
+    it "returns only soft-deleted employees with pagination metadata" do
+      deleted_employee = Employee.create!(employee_attributes.merge(discarded_at: Time.current))
+      Employee.create!(employee_attributes.merge(email: "kept@example.com"))
+
+      get "/api/employees/deleted"
+
+      expect(response).to have_http_status(:ok)
+      expect(response.parsed_body.fetch("data").pluck("id")).to eq([ deleted_employee.id ])
+      expect(response.parsed_body.dig("meta", "total_count")).to eq(1)
+    end
+  end
+
+  describe "PATCH /api/employees/:id/restore" do
+    let!(:employee) { Employee.create!(employee_attributes.merge(employment_status: "terminated", discarded_at: Time.current)) }
+
+    it "restores the employee and sets their status to active" do
+      patch "/api/employees/#{employee.id}/restore"
+
+      expect(response).to have_http_status(:ok)
+      expect(response.parsed_body).to include(
+        "id" => employee.id,
+        "employment_status" => "active"
+      )
+      expect(employee.reload).to be_kept
+      expect(employee).to be_active
+    end
+
+    it "returns not found for an employee that is not soft-deleted" do
+      employee.undiscard!
+
+      patch "/api/employees/#{employee.id}/restore"
 
       expect(response).to have_http_status(:not_found)
     end

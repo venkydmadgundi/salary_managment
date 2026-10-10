@@ -64,10 +64,12 @@ Provide free-text search functionality across:
 
 The HR Manager should be able to:
 
-- Create employees.
+- Create employee records.
 - View employee details.
-- Edit employee information.
-- Soft-delete employees.
+- Edit employee information from the employee detail page.
+- Soft-delete employees from the employee detail page so they are removed from active listings.
+- Restore soft-deleted employees from the deleted employees list; restored employees return with active employment status.
+- CSV/Excel import.
 
 The application should enforce validations including:
 
@@ -103,8 +105,7 @@ The generated data should include:
 
 The following features are intentionally excluded from this version:
 
-1. CSV/Excel import.
-2. Multi-currency salary support.
+1. Multi-currency salary support.
 
 ## Assumptions
 

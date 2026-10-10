@@ -21,6 +21,7 @@ gem "solid_cable"
 gem "pagy"
 gem "discard"
 gem "rack-cors"
+gem "csv"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false

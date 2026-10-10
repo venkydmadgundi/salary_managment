@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
+    get "employees/export", to: "employees#export", defaults: { format: :csv }
+    get "employees/deleted", to: "employees#deleted"
+    patch "employees/:id/restore", to: "employees#restore"
     resources :employees, only: %i[index show create update destroy]
     get :stats, to: "stats#show"
   end
