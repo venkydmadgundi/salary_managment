@@ -16,7 +16,7 @@ class Employee < ApplicationRecord
   validates :department, :job_title, :join_date, presence: true
   validates :salary_cents, presence: true,
                            numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :currency, presence: true, inclusion: { in: SUPPORTED_CURRENCIES }
+  validates :currency, presence: true
 
   scope :sorted, ->(key, dir) {
     col = { "name" => "name",

@@ -1,18 +1,21 @@
 module Api
   class EmployeesController < ApplicationController
-    include Pagy::Backend
-
     def index
       scope = EmployeeFilter.new(Employee.kept, params.to_unsafe_h).call
-      pagy, records = pagy(scope, items: EmployeeFilter::PER_PAGE)
+      page = params[:page].to_i.positive? ? params[:page].to_i : 1
+      per_page = EmployeeFilter::PER_PAGE
+      total_count = scope.count
+      total_pages = (total_count.to_f / per_page).ceil
+      offset = (page - 1) * per_page
+      records = scope.limit(per_page).offset(offset)
 
       render json: {
         data: records.map(&:as_api_json),
         meta: {
-          page: pagy.page,
-          per_page: pagy.items,
-          total_count: pagy.count,
-          total_pages: pagy.pages,
+          page: page,
+          per_page: per_page,
+          total_count: total_count,
+          total_pages: total_pages,
         },
       }
     end
