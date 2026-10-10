@@ -11,7 +11,6 @@ Build a web-based Salary Management System that allows the HR Manager to:
 - Browse and search employee salary information.
 - Filter and sort employees based on relevant criteria.
 - Create, update, view, and soft-delete employee records.
-- Maintain salary history for employees.
 - View salary and workforce statistics through a dashboard.
 - Analyze salary distribution across countries and departments.
 
@@ -41,18 +40,6 @@ The `employees` table should contain:
 - `created_at`
 - `updated_at`
 - `discarded_at`
-
-#### Salary History
-
-The `salary_history` table should contain:
-
-- `id`
-- `employee_id`
-- `base_amount`
-- `effective_on`
-- `reason`
-- `created_at`
-- `updated_at`
 
 ### 2. Employee Management
 
@@ -124,5 +111,4 @@ The following features are intentionally excluded from this version:
 1. All salaries represent **annual gross compensation**.
 2. Currency is ignored for simplicity.
 3. Each employee has exactly **one active salary** at any given time.
-4. Historical salary changes are maintained in the `salary_history` table.
-5. Deleted employees are soft-deleted rather than permanently removed.
+4. Deleted employees are soft-deleted rather than permanently removed.

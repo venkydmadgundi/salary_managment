@@ -2,29 +2,23 @@ class Employee < ApplicationRecord
   include Discard::Model
 
   EMPLOYMENT_STATUSES = {
-    active: 0,
-    on_leave: 1,
-    terminated: 2,
+    active: "active",
+    on_leave: "on_leave",
+    terminated: "terminated"
   }.freeze
 
   enum :employment_status, EMPLOYMENT_STATUSES, validate: true
 
-  validates :full_name, presence: true
+  validates :name, :country, :department, :job_title, :join_date, :employment_status, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false },
                     format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :country, presence: true, length: { is: 2 }
-  validates :department, :job_title, :join_date, presence: true
-  validates :salary_cents, presence: true,
-                           numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :currency, presence: true
+  validates :country, length: { is: 2 }
+  validates :salary, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
   scope :sorted, ->(key, dir) {
-    col = { "name" => "name",
-            "country" => "country", "department" => "department",
-            "employment_status" => "employment_status", "join_date" => "join_date" }
-          .fetch(key.to_s, "name")
+    col = %w[name email country department employment_status salary join_date].include?(key.to_s) ? key.to_s : "name"
     d = dir.to_s.downcase == "desc" ? "desc" : "asc"
-    order(Arel.sql("#{col} #{d}"))
+    order(col => d)
   }
 
   def as_api_json
@@ -36,12 +30,7 @@ class Employee < ApplicationRecord
       department: department,
       job_title: job_title,
       join_date: join_date.iso8601,
-      employment_status: employment_status,
+      employment_status: employment_status
     }
   end
-
-
-
-
-
 end

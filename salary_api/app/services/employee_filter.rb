@@ -1,6 +1,6 @@
 class EmployeeFilter
   PER_PAGE = 10
-  SORTABLE = %w[full_name email country department employment_status salary hire_date].freeze
+  SORTABLE = %w[name email country department employment_status salary join_date].freeze
 
   def initialize(scope = Employee.kept, params = {})
     @scope = scope
@@ -24,7 +24,7 @@ class EmployeeFilter
     q = @params[:q].to_s.strip
     return rel if q.empty?
     like = "%#{sanitize_like(q)}%"
-    rel.where("full_name LIKE :q OR email LIKE :q", q: like)
+    rel.where("name LIKE :q OR email LIKE :q", q: like)
   end
 
   def filter_country(rel)
@@ -43,14 +43,14 @@ class EmployeeFilter
   end
 
   def filter_salary_range(rel)
-    rel = rel.where("salary_cents >= ?", @params[:min_salary].to_i) if @params[:min_salary].present?
-    rel = rel.where("salary_cents <= ?", @params[:max_salary].to_i) if @params[:max_salary].present?
+    rel = rel.where("salary >= ?", @params[:min_salary].to_d) if @params[:min_salary].present?
+    rel = rel.where("salary <= ?", @params[:max_salary].to_d) if @params[:max_salary].present?
     rel
   end
 
   def sort(rel)
     key, dir = @params[:sort].to_s.split(":", 2)
-    key = "full_name" unless SORTABLE.include?(key)
+    key = "name" unless SORTABLE.include?(key)
     rel.sorted(key, dir || "asc")
   end
 
