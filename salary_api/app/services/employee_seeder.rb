@@ -27,6 +27,7 @@ class EmployeeSeeder
   end
 
   def call
+    backfill_missing_salaries
     return if Employee.count >= @count
 
     faker_unique = {}
@@ -51,6 +52,7 @@ class EmployeeSeeder
         job_title: title,
         join_date: Faker::Date.between(from: 12.years.ago, to: Date.current),
         employment_status: weighted_status,
+        salary: rng.rand(profile[:range]),
         created_at: now,
         updated_at: now,
       }
@@ -65,6 +67,15 @@ class EmployeeSeeder
   end
 
   private
+
+  def backfill_missing_salaries
+    Employee.where(salary: nil, country: PROFILES.keys).find_each do |employee|
+      employee.update_columns(
+        salary: rng.rand(PROFILES.fetch(employee.country)[:range]),
+        updated_at: Time.current
+      )
+    end
+  end
 
   def rng
     @rng ||= Random.new(42)   # deterministic seed -> reproducible data

@@ -8,5 +8,5 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts "Seeding employees..."
-EmployeeSeeder.new(count: 10000).call
+EmployeeSeeder.new(count: 1000).call
 puts "Done. Total: #{Employee.count}"

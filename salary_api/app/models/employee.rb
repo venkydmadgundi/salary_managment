@@ -30,7 +30,8 @@ class Employee < ApplicationRecord
       department: department,
       job_title: job_title,
       join_date: join_date.iso8601,
-      employment_status: employment_status
+      employment_status: employment_status,
+      salary: salary.to_s
     }
   end
 end
