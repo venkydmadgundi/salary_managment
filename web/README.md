@@ -1,32 +1,48 @@
-# React + TypeScript + Vite
+# Salary Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is the React + TypeScript frontend for the Salary Management System.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application provides a user-friendly HR dashboard and employee management interface for browsing, filtering, and updating salary records.
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- Vite
+- React Router
 
-## Expanding the Oxlint configuration
+## Local Setup
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+cd web
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+The app runs at http://localhost:5173 by default.
+
+## API Configuration
+
+The frontend uses the `VITE_API_BASE` environment variable to connect to the Rails backend.
+
+```env
+VITE_API_BASE=http://localhost:3000
+```
+
+If the backend is running elsewhere, update this value before starting the app.
+
+## Available Scripts
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run preview
+```
+
+## Notes
+
+- The app expects the Rails API to be available on the configured base URL.
+- Export URLs are generated dynamically from the active filters.
